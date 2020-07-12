@@ -22,7 +22,7 @@ SET(CMAKE_CXX_FLAGS "-std=c++11" )
 #创建型模式
 ADD_SUBDIRECTORY(CreationalPattern)
 #结构型模式
-#ADD_SUBDIRECTORY(StructuralPatterns)
+ADD_SUBDIRECTORY(StructuralPattern)
 #行为型模式
 ADD_SUBDIRECTORY(BehaviorPattern)
 #结束提示

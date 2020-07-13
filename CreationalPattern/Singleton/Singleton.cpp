@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <thread>
+#include <iostream>
+#include <condition_variable>
 #include "Singleton.h"
 
 class CFileSystem :public CTSSingletonPtr<CFileSystem>

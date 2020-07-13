@@ -6,6 +6,7 @@
 #include <array>
 #include <list>
 #include <string>
+#include <algorithm>
 #include "Composite.h"
 
 int main()

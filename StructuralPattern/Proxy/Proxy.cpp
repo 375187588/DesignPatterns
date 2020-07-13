@@ -29,7 +29,7 @@ std::string GetCurTimeToString(std::string& strTime)
 	struct tm t;
 	localtime_s(&t, &tb.time);
 	char szTime[32];
-	sprintf(szTime, 32, "%4.4d/%2.2d/%2.2d %2.2d:%2.2d:%2.2d:%4.4d",
+	sprintf(szTime,"%4.4d/%2.2d/%2.2d %2.2d:%2.2d:%2.2d:%4.4d",
 		t.tm_year + 1900, t.tm_mon + 1, t.tm_mday,
 		t.tm_hour, t.tm_min, t.tm_sec, tb.millitm);
 	strTime = szTime;

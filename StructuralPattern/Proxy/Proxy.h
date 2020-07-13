@@ -1,14 +1,14 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º×°ÊÎÕßÄ£Ê½ÀàÊµÀı
-//ÎÄ¼ş£ºProxy.h
-//ÈÕÆÚ£º2020/6/29
-//×÷Õß£ºcoder
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šè£…é¥°è€…æ¨¡å¼ç±»å®ä¾‹
+//æ–‡ä»¶ï¼šProxy.h
+//æ—¥æœŸï¼š2020/6/29
+//ä½œè€…ï¼šcoder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
-//¸öÈËÉí·İ
+//ä¸ªäººèº«ä»½
 enum ePersonIdentity
 {
 	OneselfID,
@@ -16,10 +16,10 @@ enum ePersonIdentity
 	eMaxIdentity
 };
 
-//¹«»ı½ğÌáÈ¡ÒµÎñ
+//å…¬ç§¯é‡‘æå–ä¸šåŠ¡
 //Withdrawal of provident fund
 
-//¹«»ı½ğ¸öÈËÌáÈ¡Ìá½»×ÊÁÏ
+//å…¬ç§¯é‡‘ä¸ªäººæå–æäº¤èµ„æ–™
 struct stWOPFundPersonInfo
 {
 	stWOPFundPersonInfo& operator = (const stWOPFundPersonInfo& r)
@@ -32,13 +32,13 @@ struct stWOPFundPersonInfo
 		return *this;
 	}
 
-	ePersonIdentity eProxy;//ÊÇ·ñÊÇ´úÀí°ìÀí
-	std::string strName;//ĞÕÃû
-	std::string strIDCard;//Éí·İÖ¤
-	std::string strTime;//Ê±¼ä
+	ePersonIdentity eProxy;//æ˜¯å¦æ˜¯ä»£ç†åŠç†
+	std::string strName;//å§“å
+	std::string strIDCard;//èº«ä»½è¯
+	std::string strTime;//æ—¶é—´
 };
 
-//´ú°ì´úÀíÈË×ÊÁÏĞÅÏ¢
+//ä»£åŠä»£ç†äººèµ„æ–™ä¿¡æ¯
 struct stProxyWOPFundPersonInfo
 {
 	stProxyWOPFundPersonInfo& operator = (const stProxyWOPFundPersonInfo& r)
@@ -49,12 +49,12 @@ struct stProxyWOPFundPersonInfo
 		return *this;
 	}
 
-	std::string strProxyName;//´úÀíÈËĞÕÃû
-	std::string strProxyIDCard;//´úÀíÈËÉí·İÖ¤
-	std::string strRelation;//¹ØÏµ
+	std::string strProxyName;//ä»£ç†äººå§“å
+	std::string strProxyIDCard;//ä»£ç†äººèº«ä»½è¯
+	std::string strRelation;//å…³ç³»
 };
 
-//¸öÈËÌáÈ¡¹«»ı½ğÒµÎñ
+//ä¸ªäººæå–å…¬ç§¯é‡‘ä¸šåŠ¡
 class CPersonWOPFundBase
 {
 public:
@@ -64,22 +64,22 @@ public:
 	virtual ~CPersonWOPFundBase() {}
 
 public:
-	//Ìá½»×ÊÁÏ
+	//æäº¤èµ„æ–™
 	virtual bool DoSubmission(const stWOPFundPersonInfo& info,
 		const stProxyWOPFundPersonInfo& pInfo) = 0;
-	//ÌáÈ¡¹«»ı½ğ
+	//æå–å…¬ç§¯é‡‘
 	virtual bool DoWOPFund() = 0;
 
 protected:
-	//±¾ÈËĞÅÏ¢
+	//æœ¬äººä¿¡æ¯
 	stWOPFundPersonInfo m_info;
-	//´úÀíÈËĞÅÏ¢
+	//ä»£ç†äººä¿¡æ¯
 	stProxyWOPFundPersonInfo m_proxyInfo;
-	//×ÊÁÏÉóºËÊÇ·ñÕıÈ·
+	//èµ„æ–™å®¡æ ¸æ˜¯å¦æ­£ç¡®
 	bool m_bPassed;
 };
 
-//¸öÈË°ìÀí¹«»ı½ğÒµÎñ
+//ä¸ªäººåŠç†å…¬ç§¯é‡‘ä¸šåŠ¡
 class CPersonWOPFund : public CPersonWOPFundBase
 {
 public:
@@ -94,35 +94,35 @@ public:
 
 	void DoProxyEvent()
 	{
-		std::cout << "Ê±¼ä:" <<
+		std::cout << "æ—¶é—´:" <<
 			m_info.strTime << 
-			" ²»ÊÇ±¾ÈË£º" <<
-			" ÓÉ " <<
+			" ä¸æ˜¯æœ¬äººï¼š" <<
+			" ç”± " <<
 			m_proxyInfo.strRelation <<
-			" ¹ØÏµµÄ," <<
+			" å…³ç³»çš„," <<
 			m_proxyInfo.strProxyName <<
-			" Éí·İÖ¤ºÅ£º" <<
+			" èº«ä»½è¯å·ï¼š" <<
 			m_proxyInfo.strProxyIDCard <<
-			" ´úÎª°ìÀí" << std::endl;
-		std::cout << "Ìá½»µÄ×ÊÁÏÉóºË³É¹¦!" << std::endl;
+			" ä»£ä¸ºåŠç†" << std::endl;
+		std::cout << "æäº¤çš„èµ„æ–™å®¡æ ¸æˆåŠŸ!" << std::endl;
 		m_bPassed = true;
 	}
 
 	void DoOneselfEvent()
 	{
-		std::cout <<"Ê±¼ä:" <<
+		std::cout <<"æ—¶é—´:" <<
 			m_info.strTime <<
-			" ÊÇ±¾ÈË£º" <<
-			" ÓÉ " <<
+			" æ˜¯æœ¬äººï¼š" <<
+			" ç”± " <<
 			m_info.strName <<
-			" Éí·İÖ¤ºÅ£º" <<
+			" èº«ä»½è¯å·ï¼š" <<
 			m_info.strIDCard <<
-			" Ç××Ô°ìÀí" << std::endl;
-		std::cout << "Ìá½»µÄ×ÊÁÏÉóºË³É¹¦!" << std::endl;
+			" äº²è‡ªåŠç†" << std::endl;
+		std::cout << "æäº¤çš„èµ„æ–™å®¡æ ¸æˆåŠŸ!" << std::endl;
 		m_bPassed = true;
 	}
 
-	//Ìá½»×ÊÁÏ
+	//æäº¤èµ„æ–™
 	bool DoSubmission(const stWOPFundPersonInfo& info,
 		const stProxyWOPFundPersonInfo& pInfo)
 	{
@@ -156,11 +156,11 @@ public:
 		default:
 			break;
 		}	
-		std::cout << "Ìá½»µÄ×ÊÁÏ²»ÕıÈ·£¡" << std::endl;
+		std::cout << "æäº¤çš„èµ„æ–™ä¸æ­£ç¡®ï¼" << std::endl;
 		return false;
 	}
 
-	//ÌáÈ¡¹«»ı½ğ
+	//æå–å…¬ç§¯é‡‘
 	bool DoWOPFund()
 	{
 		if (m_bPassed)
@@ -168,21 +168,21 @@ public:
 			switch (m_info.eProxy)
 			{
 			case ProxyID:
-				std::cout << "³É¹¦´ú°ì¹«»ı½ğÌáÈ¡ÒµÎñ£¬¿îÏîÒ»¸öÔÂºóµ½ÕÊ£¡" << std::endl;
+				std::cout << "æˆåŠŸä»£åŠå…¬ç§¯é‡‘æå–ä¸šåŠ¡ï¼Œæ¬¾é¡¹ä¸€ä¸ªæœˆååˆ°å¸ï¼" << std::endl;
 				return true;
 			case OneselfID:
-				std::cout << "³É¹¦°ìÀí¹«»ı½ğÌáÈ¡ÒµÎñ£¬¿îÏîÒ»¸öÔÂºóµ½ÕÊ£¡" << std::endl;
+				std::cout << "æˆåŠŸåŠç†å…¬ç§¯é‡‘æå–ä¸šåŠ¡ï¼Œæ¬¾é¡¹ä¸€ä¸ªæœˆååˆ°å¸ï¼" << std::endl;
 				return true;
 			default:
 				break;
 			}			
 		}
-		std::cout << "°ìÀí¹«»ı½ğÌáÈ¡ÒµÎñÊ§°Ü!" << std::endl;
+		std::cout << "åŠç†å…¬ç§¯é‡‘æå–ä¸šåŠ¡å¤±è´¥!" << std::endl;
 		return false;
 	}
 };
 
-//´úÀíÈË´ú°ì¹«»ı½ğÒµÎñ
+//ä»£ç†äººä»£åŠå…¬ç§¯é‡‘ä¸šåŠ¡
 class CPersonWOPFundProxy
 {
 public:
@@ -192,14 +192,14 @@ public:
 	}
 	~CPersonWOPFundProxy(){	}
 
-	//´úÀíÌá½»×ÊÁÏ
+	//ä»£ç†æäº¤èµ„æ–™
 	bool DoSubmission(const stWOPFundPersonInfo& info,
 		const stProxyWOPFundPersonInfo& pInfo)
 	{
 		return m_pSub->DoSubmission(info, pInfo);
 	}
 
-	//´úÀíÌáÈ¡¹«»ı½ğ
+	//ä»£ç†æå–å…¬ç§¯é‡‘
 	bool DoWOPFund()
 	{
 		return m_pSub->DoWOPFund();

@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£ºÍâ¹ÛÄ£Ê½ÀàÊµÀı
-//ÎÄ¼ş£ºFacade.h
-//ÈÕÆÚ£º2020/6/29
-//×÷Õß£ºcoder
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šå¤–è§‚æ¨¡å¼ç±»å®ä¾‹
+//æ–‡ä»¶ï¼šFacade.h
+//æ—¥æœŸï¼š2020/6/29
+//ä½œè€…ï¼šcoder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
 class CMaleUnmarriedcert
@@ -17,10 +17,10 @@ public:
 	}
 	~CMaleUnmarriedcert() {};
 
-	//Ìá½»ÄĞ·½×ÊÁÏ
+	//æäº¤ç”·æ–¹èµ„æ–™
 	void Give()
 	{
-		std::cout << "ÄĞ·½Î´»éÖ¤Ã÷,³£×¡»§¿Ú±¾£¬¾ÓÃñÉí·İÖ¤,»§¼®Ö¤Ã÷" << m_pStr->c_str() << std::endl;
+		std::cout << "ç”·æ–¹æœªå©šè¯æ˜,å¸¸ä½æˆ·å£æœ¬ï¼Œå±…æ°‘èº«ä»½è¯,æˆ·ç±è¯æ˜" << m_pStr->c_str() << std::endl;
 	}
 	
 private:
@@ -37,22 +37,22 @@ public:
 	}
 	~CFemaleUnmarriedcert() {};
 
-	//Ìá½»Å®·½×ÊÁÏ
+	//æäº¤å¥³æ–¹èµ„æ–™
 	void Give()
 	{
-		std::cout << "Å®·½Î´»éÖ¤Ã÷,³£×¡»§¿Ú±¾£¬¾ÓÃñÉí·İÖ¤,»§¼®Ö¤Ã÷" << m_pStr->c_str() << std::endl;
+		std::cout << "å¥³æ–¹æœªå©šè¯æ˜,å¸¸ä½æˆ·å£æœ¬ï¼Œå±…æ°‘èº«ä»½è¯,æˆ·ç±è¯æ˜" << m_pStr->c_str() << std::endl;
 	}
 
 private:
 	std::string* m_pStr;
 };
-//3ÕÅ2´ç½üÆÚ°ëÉíÃâ¹Ú²ÊÉ«ºÏÓ°ÕÕ
+//3å¼ 2å¯¸è¿‘æœŸåŠèº«å…å† å½©è‰²åˆå½±ç…§
 class CMBOCAffairs
 {
 public:
 	CMBOCAffairs()
 	{
-		m_str = "3ÕÅ2´ç½üÆÚ°ëÉíÃâ¹Ú²ÊÉ«ºÏÓ°ÕÕ";
+		m_str = "3å¼ 2å¯¸è¿‘æœŸåŠèº«å…å† å½©è‰²åˆå½±ç…§";
 		m_pMale = new CMaleUnmarriedcert(&m_str);
 		m_pFemal = new CFemaleUnmarriedcert(&m_str);
 	}
@@ -64,11 +64,11 @@ public:
 	
 	void DoAFMCertificate()
 	{
-		//Ìá½»ÄĞ·½×ÊÁÏ
+		//æäº¤ç”·æ–¹èµ„æ–™
 		m_pMale->Give();
-		//Ìá½»Å®·½×ÊÁÏ
+		//æäº¤å¥³æ–¹èµ„æ–™
 		m_pFemal->Give();
-		std::cout << "³É¹¦°ìÀí½á»éµÇ¼ÇÁË£¬¿ìÄÃ×Å½á»éÖ¤ºÍÄãÇ×°®µÄÏàÇ×Ïà°®£¬°×Í·µ½ÀÏ°É!" << std::endl;
+		std::cout << "æˆåŠŸåŠç†ç»“å©šç™»è®°äº†ï¼Œå¿«æ‹¿ç€ç»“å©šè¯å’Œä½ äº²çˆ±çš„ç›¸äº²ç›¸çˆ±ï¼Œç™½å¤´åˆ°è€å§!" << std::endl;
 	}
 
 private:
@@ -78,7 +78,7 @@ private:
 };
 
 //////////////////////////////////////////////////////////
-//¸öË°ÏµÍ³
+//ä¸ªç¨ç³»ç»Ÿ
 class CPersonTaxSystem
 {
 public:
@@ -90,11 +90,11 @@ public:
 	}
 	void DoTax()
 	{
-		std::cout << "¸öË°×ÓÏµÍ³ÒµÎñ" << std::endl;
+		std::cout << "ä¸ªç¨å­ç³»ç»Ÿä¸šåŠ¡" << std::endl;
 	}
 };
 
-//Ïû·ÑË°ÏµÍ³
+//æ¶ˆè´¹ç¨ç³»ç»Ÿ
 class CConsumptiontaxSystem
 {
 public:
@@ -106,11 +106,11 @@ public:
 	}
 	void DoTax()
 	{
-		std::cout << "Ïû·ÑË°×ÓÏµÍ³ÒµÎñ" << std::endl;
+		std::cout << "æ¶ˆè´¹ç¨å­ç³»ç»Ÿä¸šåŠ¡" << std::endl;
 	}
 };
 
-//ÆóÒµËùµÃË°ÏµÍ³
+//ä¼ä¸šæ‰€å¾—ç¨ç³»ç»Ÿ
 class CBusinessIncomeTaxSystem
 {
 public:
@@ -122,11 +122,11 @@ public:
 	}
 	void DoTax()
 	{
-		std::cout << "ÆóÒµËùµÃË°×ÓÏµÍ³ÒµÎñ" << std::endl;
+		std::cout << "ä¼ä¸šæ‰€å¾—ç¨å­ç³»ç»Ÿä¸šåŠ¡" << std::endl;
 	}
 };
 
-//º£¹ØË°ÎñÏµÍ³
+//æµ·å…³ç¨åŠ¡ç³»ç»Ÿ
 class CCustomsTaxSystem
 {
 public:
@@ -138,7 +138,7 @@ public:
 	}
 	void DoTax()
 	{
-		std::cout << "º£¹ØË°Îñ×ÓÏµÍ³ÒµÎñ" << std::endl;
+		std::cout << "æµ·å…³ç¨åŠ¡å­ç³»ç»Ÿä¸šåŠ¡" << std::endl;
 	}
 };
 

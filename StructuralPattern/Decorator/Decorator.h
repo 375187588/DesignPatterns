@@ -1,14 +1,14 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º×°ÊÎÕßÄ£Ê½ÀàÊµÀı
-//ÎÄ¼ş£ºDecorator.h
-//ÈÕÆÚ£º2020/6/28
-//×÷Õß: coder
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šè£…é¥°è€…æ¨¡å¼ç±»å®ä¾‹
+//æ–‡ä»¶ï¼šDecorator.h
+//æ—¥æœŸï¼š2020/6/28
+//ä½œè€…: coder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
-//µçÊÓ±³Ç½
+//ç”µè§†èƒŒå¢™
 class CTVBgWall
 {
 public:
@@ -19,10 +19,10 @@ public:
 	}
 
 public:
-	virtual void Decorate() { std::cout << "µçÊÓ±³¾°Ç½ÏëÒª×°ĞŞ" << std::endl; }
+	virtual void Decorate() { std::cout << "ç”µè§†èƒŒæ™¯å¢™æƒ³è¦è£…ä¿®" << std::endl; }
 };
 
-//Ö±½Ó×°ĞŞ
+//ç›´æ¥è£…ä¿®
 class CSchemeTVBgWall : public CTVBgWall
 {
 public:
@@ -40,11 +40,11 @@ public:
 
 	void DoScheme()
 	{
-		std::cout << "µçÊÓ±³¾°Ç½ÌùÉÏ¸ßµµ´óÀíÊ¯²Ä" << std::endl;
+		std::cout << "ç”µè§†èƒŒæ™¯å¢™è´´ä¸Šé«˜æ¡£å¤§ç†çŸ³æ" << std::endl;
 	}
 };
 
-//×°ÊÎÕß
+//è£…é¥°è€…
 class CDecorator : public CTVBgWall
 {
 public:
@@ -65,7 +65,7 @@ protected:
 	CTVBgWall* m_pWall;
 };
 
-//°ü½ğ±ßµÄ×°ÊÎÕß
+//åŒ…é‡‘è¾¹çš„è£…é¥°è€…
 class CTVBgWallDecorator : public CDecorator
 {
 public:
@@ -87,6 +87,6 @@ public:
 
 	void DoDecorate()
 	{
-		std::cout << "²»ÃÀ¹Û£¬²»¸ß´óÉÏ£¬ÔÚ°üÉÏ½ğ±ß" << std::endl;
+		std::cout << "ä¸ç¾è§‚ï¼Œä¸é«˜å¤§ä¸Šï¼Œåœ¨åŒ…ä¸Šé‡‘è¾¹" << std::endl;
 	}
 };

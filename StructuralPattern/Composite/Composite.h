@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º×éºÏÄ£Ê½ÀàÊµÀý
-//ÎÄ¼þ£ºComposite.h
-//ÈÕÆÚ£º2020/6/30
-//×÷Õß£ºcoder
-//ÐÞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜Žï¼šç»„åˆæ¨¡å¼ç±»å®žä¾‹
+//æ–‡ä»¶ï¼šComposite.h
+//æ—¥æœŸï¼š2020/6/30
+//ä½œè€…ï¼šcoder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
 class CComponent
@@ -73,9 +73,9 @@ public:
 
 enum eOrderType
 {
-	DLR,//ÏÈÐò±éÀú
-	LDR,//ÖÐÐò±éÀú
-	LRD //ºóÐò±éÀú
+	DLR,//å…ˆåºéåŽ†
+	LDR,//ä¸­åºéåŽ†
+	LRD //åŽåºéåŽ†
 };
 
 class CAbstractTreeNode

@@ -1,13 +1,13 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º´´½¨ÕßÄ£Ê½Àà
-//ÎÄ¼ş£ºProduce.h
-//ÈÕÆÚ£º2020/6/23
-//×÷Õß£ºcoder
-//QQ£º375187588
-//ĞŞ¸Ä£º2020/6/30
-//°æ±¾£º
+//è¯´æ˜ï¼šåˆ›å»ºè€…æ¨¡å¼ç±»
+//æ–‡ä»¶ï¼šProduce.h
+//æ—¥æœŸï¼š2020/6/23
+//ä½œè€…ï¼šcoder
+//QQï¼š375187588
+//ä¿®æ”¹ï¼š2020/6/30
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
 class CCar
@@ -47,17 +47,17 @@ public:
 	}
 	void Print()
 	{
-		std::cout << "Éú²ú³§ÉÌ:" << m_strManufacturer << std::endl;
-		std::cout << "µ×ÅÌ:" << m_strChassis << std::endl;
-		std::cout << "ÂÖ×Ó:" << m_strWheel << std::endl;
-		std::cout << "·¢¶¯»ú:" << m_strEngine << std::endl;		
+		std::cout << "ç”Ÿäº§å‚å•†:" << m_strManufacturer << std::endl;
+		std::cout << "åº•ç›˜:" << m_strChassis << std::endl;
+		std::cout << "è½®å­:" << m_strWheel << std::endl;
+		std::cout << "å‘åŠ¨æœº:" << m_strEngine << std::endl;		
 	}
 
 private:
-	std::string m_strManufacturer;//Éú²ú³§ÉÌ
-	std::string m_strEngine;//·¢¶¯»ú
-	std::string m_strChassis;//µ×ÅÌ
-	std::string m_strWheel;//ÂÖ×Ó
+	std::string m_strManufacturer;//ç”Ÿäº§å‚å•†
+	std::string m_strEngine;//å‘åŠ¨æœº
+	std::string m_strChassis;//åº•ç›˜
+	std::string m_strWheel;//è½®å­
 };
 
 class CCarBuilderBase
@@ -85,19 +85,19 @@ class CBenzCar : public CCarBuilderBase
 protected:
 	void BuildManufacturer()
 	{
-		m_car.SetManufacturer("±±¾©±¼³Û¹«Ë¾\n");
+		m_car.SetManufacturer("åŒ—äº¬å¥”é©°å…¬å¸\n");
 	}
 	void BuildChassis()
 	{
-		m_car.SetChassis("½ø¿ÚµÂ¹ú±¼³Ûµ×ÅÌ\n");
+		m_car.SetChassis("è¿›å£å¾·å›½å¥”é©°åº•ç›˜\n");
 	}
 	void BuildWheel()
 	{
-		m_car.SetWheel("½ø¿ÚµÂ¹ú±¼³ÛÂÖÌ¥\n");
+		m_car.SetWheel("è¿›å£å¾·å›½å¥”é©°è½®èƒ\n");
 	}
 	void BuildEngine()
 	{
-		m_car.SetEngine("½ø¿ÚµÂ¹ú±¼³ÛÒıÇæ\n");
+		m_car.SetEngine("è¿›å£å¾·å›½å¥”é©°å¼•æ“\n");
 	}
 };
 
@@ -106,21 +106,21 @@ class CBMWCar : public CCarBuilderBase
 protected:
 	void BuildManufacturer()
 	{
-		m_car.SetManufacturer("µÂ¹ú±¦Âí¹«Ë¾\n");
+		m_car.SetManufacturer("å¾·å›½å®é©¬å…¬å¸\n");
 	}
 	void BuildChassis()
 	{
-		m_car.SetChassis("½ø¿ÚµÂ¹ú±¦Âíµ×ÅÌ\n");
+		m_car.SetChassis("è¿›å£å¾·å›½å®é©¬åº•ç›˜\n");
 	}
 	void BuildWheel()
 	{
-		m_car.SetWheel("½ø¿ÚµÂ¹ú±¦ÂíÂÖÌ¥\n");
+		m_car.SetWheel("è¿›å£å¾·å›½å®é©¬è½®èƒ\n");
 	}
 	void BuildEngine()
 	{
-		m_car.SetEngine("½ø¿ÚµÂ¹ú±¦ÂíÒıÇæ\n");
+		m_car.SetEngine("è¿›å£å¾·å›½å®é©¬å¼•æ“\n");
 	}
 };
 
-//¹¤³§Ä£Ê½²»¿¼ÂÇ×é×°µÄ¹ı³Ì£¬¶øÊÇÖ±½ÓÉú³ÉÒ»¸öÎÒÏëÒªµÄ¶ÔÏó ½â¾öµÄÊÇ£º¹¤³§Éú²úĞÂ²úÆ·
-//´´½¨ÕßÄ£Ê½ÏÈ´´½¨Ã¿¸ö²¿¼ş£¬ÔÚÍ³Ò»×é×°³ÉÒ»¸ö¶ÔÏó ¹¤³§¿ØÖÆ²úÆ·Éú³ÉÆ÷×é×°¸÷¸ö²¿¼şµÄ¹ı³Ì£¬È»ºó´ÓĞÂ²úÆ·Éú³ÉÆ÷ÖĞµÃµ½²úÆ·
+//å·¥å‚æ¨¡å¼ä¸è€ƒè™‘ç»„è£…çš„è¿‡ç¨‹ï¼Œè€Œæ˜¯ç›´æ¥ç”Ÿæˆä¸€ä¸ªæˆ‘æƒ³è¦çš„å¯¹è±¡ è§£å†³çš„æ˜¯ï¼šå·¥å‚ç”Ÿäº§æ–°äº§å“
+//åˆ›å»ºè€…æ¨¡å¼å…ˆåˆ›å»ºæ¯ä¸ªéƒ¨ä»¶ï¼Œåœ¨ç»Ÿä¸€ç»„è£…æˆä¸€ä¸ªå¯¹è±¡ å·¥å‚æ§åˆ¶äº§å“ç”Ÿæˆå™¨ç»„è£…å„ä¸ªéƒ¨ä»¶çš„è¿‡ç¨‹ï¼Œç„¶åä»æ–°äº§å“ç”Ÿæˆå™¨ä¸­å¾—åˆ°äº§å“

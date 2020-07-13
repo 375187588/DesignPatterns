@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£ºÇÅ½ÓÄ£Ê½ÀàÊµÀı
-//ÎÄ¼ş£ºBridge.h
-//ÈÕÆÚ£º2020/6/29
-//×÷Õß£ºcoder
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šæ¡¥æ¥æ¨¡å¼ç±»å®ä¾‹
+//æ–‡ä»¶ï¼šBridge.h
+//æ—¥æœŸï¼š2020/6/29
+//ä½œè€…ï¼šcoder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
 class CDataSafeBase
@@ -23,9 +23,9 @@ public:
 	{
 		return m_strData;
 	}
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	virtual bool Encryption() { return false; };
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	virtual bool Decrypt() { return false; }
 	
 protected:
@@ -40,12 +40,12 @@ public:
 	
 	bool Encryption()
 	{
-		std::cout << "½«£º\""<< m_strData.c_str() << "\" ½øĞĞÁËCRC¼ÓÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\""<< m_strData.c_str() << "\" è¿›è¡Œäº†CRCåŠ å¯†" << std::endl;
 		return true;
 	}
 	bool Decrypt()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\"½øĞĞÁËCRC½âÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\"è¿›è¡Œäº†CRCè§£å¯†" << std::endl;
 		return true;
 	}	
 };
@@ -59,12 +59,12 @@ public:
 
 	bool Encryption()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\"½øĞĞÁËOR¼ÓÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\"è¿›è¡Œäº†ORåŠ å¯†" << std::endl;
 		return true;
 	}
 	bool Decrypt()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\"½øĞĞÁËOR½âÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\"è¿›è¡Œäº†ORè§£å¯†" << std::endl;
 		return true;
 	}
 };
@@ -79,9 +79,9 @@ public:
 	virtual ~CDataBase() {}
 
 public:
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	virtual bool Encryption() = 0;
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	virtual bool Decrypt() = 0;
 
 protected:
@@ -98,16 +98,16 @@ public:
 	virtual ~CMemBuffer() {}
 
 public:
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	bool Encryption()
 	{
-		std::cout << "CMemBuffer ¼ÓÃÜÊı¾İ¿ªÊ¼" << std::endl;
+		std::cout << "CMemBuffer åŠ å¯†æ•°æ®å¼€å§‹" << std::endl;
 		return m_if->Encryption();
 	}
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	bool Decrypt()
 	{
-		std::cout << "CMemBuffer ½âÃÜÊı¾İ¿ªÊ¼" << std::endl;
+		std::cout << "CMemBuffer è§£å¯†æ•°æ®å¼€å§‹" << std::endl;
 		return m_if->Decrypt();
 	}
 };
@@ -123,16 +123,16 @@ public:
 	virtual ~CFileBuffer() {}
 
 public:
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	bool Encryption()
 	{
-		std::cout << "CFileBuffer ¼ÓÃÜÊı¾İ¿ªÊ¼" << std::endl;
+		std::cout << "CFileBuffer åŠ å¯†æ•°æ®å¼€å§‹" << std::endl;
 		return m_if->Encryption();
 	}
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	bool Decrypt()
 	{
-		std::cout << "CFileBuffer ½âÃÜÊı¾İ¿ªÊ¼" << std::endl;
+		std::cout << "CFileBuffer è§£å¯†æ•°æ®å¼€å§‹" << std::endl;
 		return m_if->Decrypt();
 	}
 };
@@ -145,9 +145,9 @@ class CSafeDataImp
 {
 public:
 	virtual ~CSafeDataImp() {};
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	virtual bool Encryption() = 0;
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	virtual bool Decrypt() = 0;
 
 protected:
@@ -169,9 +169,9 @@ public:
 	{
 		return m_strData;
 	}
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	virtual bool Encryption() = 0;
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	virtual bool Decrypt() = 0;
 
 protected:
@@ -186,12 +186,12 @@ public:
 
 	bool Encryption()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\" ½øĞĞÁËAES¼ÓÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\" è¿›è¡Œäº†AESåŠ å¯†" << std::endl;
 		return true;
 	}
 	bool Decrypt()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\"½øĞĞÁËAES½âÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\"è¿›è¡Œäº†AESè§£å¯†" << std::endl;
 		return true;
 	}
 };
@@ -204,12 +204,12 @@ public:
 
 	bool Encryption()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\" ½øĞĞÁËDES¼ÓÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\" è¿›è¡Œäº†DESåŠ å¯†" << std::endl;
 		return true;
 	}
 	bool Decrypt()
 	{
-		std::cout << "½«£º\"" << m_strData.c_str() << "\"½øĞĞÁËDES½âÃÜ" << std::endl;
+		std::cout << "å°†ï¼š\"" << m_strData.c_str() << "\"è¿›è¡Œäº†DESè§£å¯†" << std::endl;
 		return true;
 	}
 };
@@ -228,12 +228,12 @@ public:
 			delete m_pImp;
 		}
 	}
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	bool Encryption()
 	{
 		return m_pImp->Encryption();
 	}
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	bool Decrypt()
 	{
 		return m_pImp->Decrypt();
@@ -258,12 +258,12 @@ public:
 		}
 	}
 
-	//¼ÓÃÜÊı¾İ
+	//åŠ å¯†æ•°æ®
 	bool Encryption()
 	{
 		return m_pImp->Encryption();
 	}
-	//½âÃÜÊı¾İ
+	//è§£å¯†æ•°æ®
 	bool Decrypt()
 	{
 		return m_pImp->Decrypt();

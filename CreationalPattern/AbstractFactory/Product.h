@@ -1,17 +1,17 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º³éÏó²úÆ·ºÍ¾ßÌå²úÆ·¶ÔÏóÀà
-//ÎÄ¼ş£ºProduct.h
-//ÈÕÆÚ£º2020/6/23
-//×÷Õß£ºcoder
-//QQ£º375187588
-//ĞŞ¸Ä£º2020/6/30
-//°æ±¾£º
+//è¯´æ˜ï¼šæŠ½è±¡äº§å“å’Œå…·ä½“äº§å“å¯¹è±¡ç±»
+//æ–‡ä»¶ï¼šProduct.h
+//æ—¥æœŸï¼š2020/6/23
+//ä½œè€…ï¼šcoder
+//QQï¼š375187588
+//ä¿®æ”¹ï¼š2020/6/30
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
 
-//³éÏó¹¤³§Ä£Ê½¿ÉÒÔ²úÉúÒ»ÏµÁĞ²úÆ·
-//ÉÌÎñ³µ
+//æŠ½è±¡å·¥å‚æ¨¡å¼å¯ä»¥äº§ç”Ÿä¸€ç³»åˆ—äº§å“
+//å•†åŠ¡è½¦
 class IBusinessCarBase
 {
 public:
@@ -20,7 +20,7 @@ public:
 	virtual void Create() = 0;
 };
 
-//ÃñÓÃ³µ
+//æ°‘ç”¨è½¦
 class ICivilCarBase
 {
 public:
@@ -29,7 +29,7 @@ public:
 	virtual void Create() = 0;
 };
 
-//ÅÜ³µ
+//è·‘è½¦
 class ISportCarBase
 {
 public:
@@ -137,15 +137,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBMWBusinessCar() { std::cout << "CBMWBusinessCar Îö¹¹ÁË!" << std::endl; }
+	~CBMWBusinessCar() { std::cout << "CBMWBusinessCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBMWBusinessCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBMWBusinessCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBMWBusinessCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBMWBusinessCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -163,15 +163,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBMWCivilCar() { std::cout << "CBMWCivilCar Îö¹¹ÁË!" << std::endl; }
+	~CBMWCivilCar() { std::cout << "CBMWCivilCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBMWCivilCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBMWCivilCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBMWCivilCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBMWCivilCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -189,15 +189,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBMWSportCar() { std::cout << "CBMWSportCar Îö¹¹ÁË!" << std::endl; }
+	~CBMWSportCar() { std::cout << "CBMWSportCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBMWSportCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBMWSportCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBMWSportCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBMWSportCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -215,15 +215,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBenzBusinessCar() { std::cout << "CBenzBusinessCar Îö¹¹ÁË!" << std::endl; }
+	~CBenzBusinessCar() { std::cout << "CBenzBusinessCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBenzBusinessCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBenzBusinessCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBenzBusinessCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBenzBusinessCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -241,15 +241,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBenzCivilCar() { std::cout << "CBenzCivilCar Îö¹¹ÁË!" << std::endl; }
+	~CBenzCivilCar() { std::cout << "CBenzCivilCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBenzCivilCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBenzCivilCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBenzCivilCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBenzCivilCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -267,15 +267,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBenzSportCar() { std::cout << "CBenzSportCar Îö¹¹ÁË!" << std::endl; }
+	~CBenzSportCar() { std::cout << "CBenzSportCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBenzSportCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBenzSportCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBenzSportCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBenzSportCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:
@@ -285,8 +285,8 @@ private:
 };
 
 ///-------------------------------------------------------------------
-//Ôö¼ÓÒ»ÖÖĞÂµÄ³µĞÍ ·¿³µ //////////////////////////////////////////////
-//ÅÜ³µ
+//å¢åŠ ä¸€ç§æ–°çš„è½¦å‹ æˆ¿è½¦ //////////////////////////////////////////////
+//è·‘è½¦
 class IRoomCarBase
 {
 public:
@@ -304,15 +304,15 @@ public:
 		m_pChassis.reset(pChassis);
 		m_pWheel.reset(pWheel);
 	}
-	~CBenzRoomCar() { std::cout << "CBenzRoomCar Îö¹¹ÁË!" << std::endl; }
+	~CBenzRoomCar() { std::cout << "CBenzRoomCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBenzRoomCar¿ªÊ¼Éú²ú£¡" << std::endl;
+		std::cout << "CBenzRoomCarå¼€å§‹ç”Ÿäº§ï¼" << std::endl;
 		m_pEngine.get()->Create();
 		m_pChassis.get()->Create();
 		m_pWheel.get()->Create();
-		std::cout << "CBenzRoomCarÉú²ú³É¹¦£¡" << std::endl;
+		std::cout << "CBenzRoomCarç”Ÿäº§æˆåŠŸï¼" << std::endl;
 	}
 
 private:

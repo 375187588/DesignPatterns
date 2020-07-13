@@ -1,14 +1,14 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£ºÊÊÅäÆ÷Ä£Ê½Àà ÀàÊÊÅäºÍ¶ÔÏóÊÊÅä
-//ÎÄ¼ş£ºAdapter.h
-//ÈÕÆÚ£º2020/6/28
-//×÷Õß: coder
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šé€‚é…å™¨æ¨¡å¼ç±» ç±»é€‚é…å’Œå¯¹è±¡é€‚é…
+//æ–‡ä»¶ï¼šAdapter.h
+//æ—¥æœŸï¼š2020/6/28
+//ä½œè€…: coder
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
-//²å×ù
+//æ’åº§
 class IPlug
 {
 public:
@@ -17,7 +17,7 @@ public:
 	virtual void DoPlugIn() = 0;
 };
 
-//Èı¿×²å×ù
+//ä¸‰å­”æ’åº§
 class CThreeHolePlug
 {
 public:
@@ -28,11 +28,11 @@ public:
 	}
 	void DoSpecialPlugIn()
 	{
-		std::cout << "Èı¿×²åÍ·½ÓÍ¨µçÔ´" << std::endl;
+		std::cout << "ä¸‰å­”æ’å¤´æ¥é€šç”µæº" << std::endl;
 	}
 };
 
-//ĞèÒªÁ½¿×²å×ù ¼Ì³ĞÊµÏÖ
+//éœ€è¦ä¸¤å­”æ’åº§ ç»§æ‰¿å®ç°
 class CAdapterClass : public IPlug,private CThreeHolePlug
 {
 public:
@@ -46,11 +46,11 @@ public:
 	void DoPlugIn()
 	{
 		this->DoSpecialPlugIn();
-		std::cout << "³É¹¦½«Èı¿×²åÍ·×ª³ÉÁ½¿×²åÍ·£¡" << std::endl;
+		std::cout << "æˆåŠŸå°†ä¸‰å­”æ’å¤´è½¬æˆä¸¤å­”æ’å¤´ï¼" << std::endl;
 	}
 };
 
-//ĞèÒªÁ½¿×²å×ù ×éºÏÊµÏÖ
+//éœ€è¦ä¸¤å­”æ’åº§ ç»„åˆå®ç°
 class CAdapterObject : public IPlug
 {
 public:
@@ -65,7 +65,7 @@ public:
 
 	void DoPlugIn()
 	{
-		std::cout << "³É¹¦½«Èı¿×²åÍ·×ª³ÉÁ½¿×²åÍ·£¡" << std::endl;
+		std::cout << "æˆåŠŸå°†ä¸‰å­”æ’å¤´è½¬æˆä¸¤å­”æ’å¤´ï¼" << std::endl;
 		m_pThreeHolePlug->DoSpecialPlugIn();
 	}
 

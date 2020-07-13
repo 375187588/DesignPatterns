@@ -51,7 +51,7 @@ class CSubject1 :public CSubject
 public:
 	CSubject1()
 	{
-		m_pMessage = '\0';
+		m_pMessage = nullptr;
 	}
 	~CSubject1() {}
 	char* GetMessage() const

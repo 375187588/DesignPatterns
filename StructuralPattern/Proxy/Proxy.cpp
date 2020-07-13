@@ -16,7 +16,7 @@ std::string CurTimeToString(std::string& strTime)
 #ifdef WIN32
 	localtime_s(&t, &curTime);
 #else
-	localtime_s(&t, &curTime);
+	localtime_r(&t, &curTime);
 #endif
 	char szTime[32];
 	sprintf(szTime,"%4.4d/%2.2d/%2.2d %2.2d:%2.2d:%2.2d:%4.4d",

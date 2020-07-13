@@ -19,6 +19,7 @@ PROJECT(${objname})
 #c++11支持
 SET(CMAKE_CXX_FLAGS "-std=c++11" )
 ADD_DEFINITIONS(-std=c++11)
+add_compile_options(-std=c++11)
 
 #创建型模式
 ADD_SUBDIRECTORY(CreationalPattern)

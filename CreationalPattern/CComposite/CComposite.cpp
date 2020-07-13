@@ -24,7 +24,7 @@ void DoLoop(TIter& iter)
 {
 	while (iter.MoveNext())
 	{
-		std::cout << "Current Node name:" << iter.GetCurrent().GetName() << std::endl;
+		std::cout << "Current Node name:" << iter.GetCurrent().GetName().c_str() << std::endl;
 	}
 }
 

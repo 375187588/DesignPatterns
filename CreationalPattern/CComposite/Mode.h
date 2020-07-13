@@ -151,7 +151,7 @@ public:
 	}
 	T& Remove()
 	{
-		T& t = m_stack.front();
+		T& t = m_stack.top();
 		m_stack.pop();
 		return t;
 	}

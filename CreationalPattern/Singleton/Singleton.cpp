@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-#include <Windows.h>
 #include "Singleton.h"
 
 class CFileSystem :public CTSSingletonPtr<CFileSystem>

@@ -11,6 +11,15 @@
 //修改：
 //版本：
 *//////////////////////////////////////////////////////
+#include <atomic>
+
+enum State : unsigned
+{
+	sleeping = 0,	//默认状态
+	running,		//开始状态
+};
+
+std::atomic<State> state{State::sleeping}; 
 
 enum eLockState : unsigned
 {
@@ -19,8 +28,8 @@ enum eLockState : unsigned
 	eLockedState		//已经锁定状态
 };
 
-extern "C" long _cdecl _InterlockedCompareExchange(long volatile*, long, long);
-#pragma intrinsic(_InterlockedCompareExchange)
+//extern "C" long _cdecl _InterlockedCompareExchange(long volatile*, long, long);
+//#pragma intrinsic(_InterlockedCompareExchange)
 
 //懒汉单例模式 原子锁
 template <class T>
@@ -46,8 +55,11 @@ public:
 	static T* GetInstance()
 	{
 		static volatile unsigned lLock = eDefaultState;
-		if (_InterlockedCompareExchange(&lLock, eLockingState, eDefaultState)
-			!= eDefaultState)
+		
+		State expected{State::sleeping}; 
+		//if (_InterlockedCompareExchange(&lLock, eLockingState, eDefaultState)
+		//	!= eDefaultState)
+		if (state.compare_exchange_strong(expected, State::running)) 
 		{
 			while (lLock != eLockedState)
 			{

@@ -1,10 +1,11 @@
 ﻿// 代理模式.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
-
+#include <stdio.h>
+#include <time.h>
 #include <iostream>
 #include <string>
-#include <time.h>
 #include <sys/timeb.h>
+#include <string.h>
 #include "Proxy.h"
 
 //返回当前系统时间 格式为：年/月/日 时:分:秒

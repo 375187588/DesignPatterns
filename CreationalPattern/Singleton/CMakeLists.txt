@@ -17,6 +17,7 @@ MESSAGE("--------------------正在生成" ${entryName} "-----------------")
 SET(CMAKE_CXX_FLAGS "-std=c++11" )
 ADD_DEFINITIONS(-std=c++11)
 add_compile_options(-std=c++11)
+add_compile_options(-pthread)
 
 AUX_SOURCE_DIRECTORY(. REG_SRC)
 

@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <memory>
 #include "Clone.h"
 
 void TestResume()

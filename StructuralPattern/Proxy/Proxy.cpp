@@ -13,7 +13,11 @@ std::string CurTimeToString(std::string& strTime)
 {
 	time_t curTime = time(nullptr);
 	struct tm t;
-	localtime_s(&t, &curTime);
+#ifdef WIN32
+	localtime_s(&t, &tb.time);
+#else
+	localtime_r(&t, &tb.time);
+#endif
 	char szTime[32];
 	sprintf(szTime,"%4.4d/%2.2d/%2.2d %2.2d:%2.2d:%2.2d:%4.4d",
 		t.tm_year + 1900, t.tm_mon + 1, t.tm_mday,
@@ -27,7 +31,11 @@ std::string GetCurTimeToString(std::string& strTime)
 {
 	timeb tb; ftime(&tb);
 	struct tm t;
+#ifdef WIN32
 	localtime_s(&t, &tb.time);
+#else
+	localtime_r(&t, &tb.time);
+#endif
 	char szTime[32];
 	sprintf(szTime,"%4.4d/%2.2d/%2.2d %2.2d:%2.2d:%2.2d:%4.4d",
 		t.tm_year + 1900, t.tm_mon + 1, t.tm_mday,

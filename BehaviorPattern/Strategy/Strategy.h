@@ -1,15 +1,15 @@
-#pragma once
+ï»¿#pragma once
 /*////////////////////////////////////////////////////
-//ËµÃ÷£º²ßÂÔÄ£Ê½ÀàÊµÀı
-//ÎÄ¼ş£ºStrategy.h
-//ÈÕÆÚ£º2020/6/30
-//×÷Õß£ºcoder
-//QQ£º375187588
-//ĞŞ¸Ä£º
-//°æ±¾£º
+//è¯´æ˜ï¼šç­–ç•¥æ¨¡å¼ç±»å®ä¾‹
+//æ–‡ä»¶ï¼šStrategy.h
+//æ—¥æœŸï¼š2020/6/30
+//ä½œè€…ï¼šcoder
+//QQï¼š375187588
+//ä¿®æ”¹ï¼š
+//ç‰ˆæœ¬ï¼š
 *//////////////////////////////////////////////////////
 
-//¶¨Òå²ßÂÔ
+//å®šä¹‰ç­–ç•¥
 class CStrategy
 {
 public:
@@ -19,7 +19,7 @@ public:
 	virtual int DoOperator(int nNum1, int nNum2) = 0;
 };
 
-//Ëã·¨¼ÓÊµÏÖ
+//ç®—æ³•åŠ å®ç°
 class CAdd : public CStrategy
 {
 public:
@@ -33,7 +33,7 @@ public:
 	}
 };
 
-//Ëã·¨¼õÊµÏÖ
+//ç®—æ³•å‡å®ç°
 class CSub : public CStrategy
 {
 public:
@@ -47,7 +47,7 @@ public:
 	}
 };
 
-//Ëã·¨³ËÊµÏÖ
+//ç®—æ³•ä¹˜å®ç°
 class CMul : public CStrategy
 {
 public:
@@ -61,7 +61,7 @@ public:
 	}
 };
 
-//Ëã·¨³ıÊµÏÖ
+//ç®—æ³•é™¤å®ç°
 class CDiv : public CStrategy
 {
 public:

@@ -1,46 +1,46 @@
-#pragma once
+ï»¿#pragma once
 #include "Factory.h"
-//·ûºÏ¿ª·Å-·â±ÕÔ­Ôò
+//ç¬¦åˆå¼€æ”¾-å°é—­åŸåˆ™
 
-//×é³É³µµÄÒıÇæ
+//ç»„æˆè½¦çš„å¼•æ“
 class CEngine
 {
 public:
 	CEngine()
 	{
-		std::cout << "×é×°ÒıÇæ !" << std::endl;
+		std::cout << "ç»„è£…å¼•æ“ !" << std::endl;
 	}
 	~CEngine()
 	{
-		std::cout << "Îö¹¹ÒıÇæ !" << std::endl;
+		std::cout << "ææ„å¼•æ“ !" << std::endl;
 	}
 };
 
-//×é³É³µµÄµ×ÅÌ
+//ç»„æˆè½¦çš„åº•ç›˜
 class CChassis
 {
 public:
 	CChassis()
 	{
-		std::cout << "×é×°µ×ÅÌ !" << std::endl;
+		std::cout << "ç»„è£…åº•ç›˜ !" << std::endl;
 	}
 	~CChassis()
 	{
-		std::cout << "Îö¹¹µ×ÅÌ !" << std::endl;
+		std::cout << "ææ„åº•ç›˜ !" << std::endl;
 	}
 };
 
-//×é³É³µµÄÂÖ×Ó
+//ç»„æˆè½¦çš„è½®å­
 class CWheel
 {
 public:
 	CWheel()
 	{
-		std::cout << "×é×°ÂÖ×Ó !" << std::endl;
+		std::cout << "ç»„è£…è½®å­ !" << std::endl;
 	}
 	~CWheel()
 	{
-		std::cout << "Îö¹¹ÂÖ×Ó !" << std::endl;
+		std::cout << "ææ„è½®å­ !" << std::endl;
 	}
 };
 
@@ -51,7 +51,7 @@ public:
 	virtual ~IBaseCar() {};
 };	
 
-//×é×°³µ
+//ç»„è£…è½¦
 class CCar : public IBaseCar
 {
 public:
@@ -63,11 +63,11 @@ public:
 	}
 	virtual ~CCar()
 	{
-		std::cout << "CCar Îö¹¹ÁË!" << std::endl;
+		std::cout << "CCar ææ„äº†!" << std::endl;
 	}
 	void Create()
 	{
-		std::cout << "CCarÓÉÒıÇæ£¬µ×ÅÌ£¬ÂÖ×Ó×éºÏ¶ø³É!" << std::endl;
+		std::cout << "CCarç”±å¼•æ“ï¼Œåº•ç›˜ï¼Œè½®å­ç»„åˆè€Œæˆ!" << std::endl;
 	}
 
 private:
@@ -91,11 +91,11 @@ public:
 	}
 };
 
-//¹¤³§·½·¨Ä£Ê½Ö»ÄÜ´´½¨Ò»ÖÖ²úÆ·
+//å·¥å‚æ–¹æ³•æ¨¡å¼åªèƒ½åˆ›å»ºä¸€ç§äº§å“
 
 
-//³éÏó¹¤³§Ä£Ê½¿ÉÒÔ²úÉúÒ»ÏµÁĞ²úÆ·
-//²úÎñ³µ
+//æŠ½è±¡å·¥å‚æ¨¡å¼å¯ä»¥äº§ç”Ÿä¸€ç³»åˆ—äº§å“
+//äº§åŠ¡è½¦
 class IBusinessCarBase
 {
 public:
@@ -104,7 +104,7 @@ public:
 	virtual void Create() = 0;
 };
 
-//ÃñÓÃ³µ
+//æ°‘ç”¨è½¦
 class ICivilCarBase
 {
 public:
@@ -113,7 +113,7 @@ public:
 	virtual void Create() = 0;
 };
 
-//ÅÜ³µ
+//è·‘è½¦
 class ISportCarBase
 {
 public:
@@ -126,11 +126,11 @@ class CBMWBusinessCar : public IBusinessCarBase
 {
 public:
 	CBMWBusinessCar(){}
-	~CBMWBusinessCar() { std::cout << "CBMWBusinessCar Îö¹¹ÁË!" << std::endl; }
+	~CBMWBusinessCar() { std::cout << "CBMWBusinessCar ææ„äº†!" << std::endl; }
 
 	void Create()
 	{
-		std::cout << "CBMWBusinessCar´´½¨£¡" << std::endl;
+		std::cout << "CBMWBusinessCaråˆ›å»ºï¼" << std::endl;
 	}
 };
 
@@ -143,7 +143,7 @@ public:
 
 	void Create()
 	{
-		std::cout << "CBMWCivilCar´´½¨£¡" << std::endl;
+		std::cout << "CBMWCivilCaråˆ›å»ºï¼" << std::endl;
 	}
 };
 
@@ -155,7 +155,7 @@ public:
 
 	void Create()
 	{
-		std::cout << "CBMWSportCar´´½¨£¡" << std::endl;
+		std::cout << "CBMWSportCaråˆ›å»ºï¼" << std::endl;
 	}
 };
 
@@ -165,7 +165,7 @@ public:
 	CBenzBusinessCar() {}
 	void Create()
 	{
-		std::cout << "CBenzBusinessCar´´½¨£¡" << std::endl;
+		std::cout << "CBenzBusinessCaråˆ›å»ºï¼" << std::endl;
 	}
 	~CBenzBusinessCar() {}
 };
@@ -179,7 +179,7 @@ public:
 
 	void Create()
 	{
-		std::cout << "CBenzCivilCar´´½¨£¡" << std::endl;
+		std::cout << "CBenzCivilCaråˆ›å»ºï¼" << std::endl;
 	}
 };
 
@@ -191,7 +191,7 @@ public:
 
 	void Create()
 	{
-		std::cout << "CBenzSportCar´´½¨£¡" << std::endl;
+		std::cout << "CBenzSportCaråˆ›å»ºï¼" << std::endl;
 	}
 };
 
@@ -220,7 +220,7 @@ public:
 	}
 	~CBMWFactor()
 	{
-		std::cout << "CBMWFactor Îö¹¹!" << std::endl;
+		std::cout << "CBMWFactor ææ„!" << std::endl;
 	}
 };
 
@@ -229,7 +229,7 @@ class CBenzFactor : public IAbstractFactor
 public:
 	~CBenzFactor()
 	{
-		std::cout << "CBenzFactor Îö¹¹!" << std::endl;
+		std::cout << "CBenzFactor ææ„!" << std::endl;
 	}
 	IBusinessCarBase* CreateBusinessCar()
 	{
@@ -245,13 +245,13 @@ public:
 	}
 };
 /*---------------------------------------
-IAbstractFactor						-	·µ»Ø ÒÀÀµ		IBusinessCarBase
+IAbstractFactor						-	è¿”å› ä¾èµ–		IBusinessCarBase
 -+CreateBusinessCar():IBusinessCarBase	- - - - - ->	+Create():void
 -										-
--+CreateCivilCar():ICivilCarBasei		-·µ»Ø ÒÀÀµ		ICivilCarBase
+-+CreateCivilCar():ICivilCarBasei		-è¿”å› ä¾èµ–		ICivilCarBase
 -										- - - - - ->	+Create():void
 --										-
--										-·µ»Ø ÒÀÀµ		ISportCarBase
+-										-è¿”å› ä¾èµ–		ISportCarBase
 -+CreateSportCar():ISportCarBase		-- - - - - ->	+Create():void
 ----------------------------------------
 

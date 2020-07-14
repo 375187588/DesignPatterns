@@ -1,6 +1,6 @@
-#pragma once
+ï»¿#pragma once
 
-//Í¨ÓÃÄ£°å·½·¨
+//é€šç”¨æ¨¡æ¿æ–¹æ³•
 class CFactor
 {
 public:
@@ -11,7 +11,7 @@ public:
 	}
 };
 
-//·µ»Ø»ùÀàµÄÄ£°å·½·¨£¬±ØĞë¼Ì³ĞCBase
+//è¿”å›åŸºç±»çš„æ¨¡æ¿æ–¹æ³•ï¼Œå¿…é¡»ç»§æ‰¿CBase
 class CBase;
 class CBaseFactor
 {
